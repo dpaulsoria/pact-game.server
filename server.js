@@ -23,6 +23,10 @@ const corsOptions = {
   },
 };
 
+app.get("/", (req, res) => {
+  res.send("Server is running");
+});
+
 app.use(cors(corsOptions));
 
 io.on("connection", (socket) => {
